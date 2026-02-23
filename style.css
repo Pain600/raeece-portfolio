@@ -1,10 +1,69 @@
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
-section { padding: 40px 10%; }
-h2 { color: #38bdf8; margin-bottom: 15px; }
-.card { background: #1e293b; padding: 20px; border-radius: 10px; margin-bottom: 15px; transition: 0.3s; }
-.card:hover { transform: scale(1.01); border: 1px solid #38bdf8; }
-.skills span { display: inline-block; background: #334155; padding: 5px 12px; margin: 4px; border-radius: 15px; font-size: 0.85rem; }
-.btn { display: inline-block; padding: 10px 20px; background: #38bdf8; color: #0f172a; border-radius: 6px; text-decoration: none; font-weight: 700; }
-footer { text-align: center; padding: 40px; background: #020617; }
-a { color: #38bdf8; }
+/* --- 1. Global Resets --- */
+html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
+* { box-sizing: border-box; }
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    /* Iridescent Animated Background */
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81, #0f172a); 
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: #e2e8f0; 
+    line-height: 1.6; 
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- 2. Typography --- */
+h1, h2 { margin-bottom: 20px; }
+h2 { color: #38bdf8; font-size: 1.8rem; }
+a { color: #38bdf8; text-decoration: none; transition: 0.2s; }
+a:hover { filter: brightness(1.4); }
+
+/* --- 3. Layout --- */
+section { padding: 60px 10%; }
+.hero { text-align: center; padding: 100px 20px; }
+
+/* --- 4. Components --- */
+.card { 
+    /* Glassmorphism Effect */
+    background: rgba(30, 41, 59, 0.6); 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px; 
+    border-radius: 15px; 
+    margin-bottom: 20px; 
+    transition: 0.3s ease; 
+}
+.card:hover { 
+    transform: scale(1.01); 
+    border: 1px solid #38bdf8; 
+    background: rgba(30, 41, 59, 0.8);
+}
+
+.btn { 
+    display: inline-block; padding: 12px 24px; 
+    background: #38bdf8; color: #0f172a; 
+    border-radius: 6px; font-weight: 700; 
+    transition: 0.3s;
+}
+.btn:hover { box-shadow: 0 0 15px #38bdf8; }
+
+.skills span { 
+    display: inline-block; background: rgba(51, 65, 85, 0.8); 
+    padding: 6px 14px; margin: 4px; 
+    border-radius: 15px; font-size: 0.9rem; 
+}
+
+/* --- 5. Footer --- */
+footer { 
+    text-align: center; 
+    padding: 40px 10%; 
+    background: rgba(2, 6, 23, 0.8); 
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+}
