@@ -4,10 +4,16 @@ function copyEmail() {
     alert("Email copied!");
 }
 
+function copyNumber(){
+    navigator.clipboard.writeText("0603347942");
+    alert("Cell number copied")
+}
+
 // Keyboard Shortcuts
 document.addEventListener('keydown', (e) => {
     if (e.key.toLowerCase() === 'c') copyEmail();
     if (e.key.toLowerCase() === 'g') window.open('https://github.com/Pain600', '_blank');
+    if (e.key.toLowerCase() === 'n') copyNumber();
 });
 
 // Animate Cards on Scroll
