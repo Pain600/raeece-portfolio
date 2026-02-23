@@ -4,15 +4,16 @@ html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
 
 body { 
     font-family: 'Inter', sans-serif; 
-    /* Iridescent Animated Background */
-    background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81, #0f172a); 
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
+    /* Metallic Iridescent Gradient */
+    background: linear-gradient(135deg, #1f1f1f, #8e8e8e, #d1d1d1, #a89f91, #1f1f1f);
+    background-attachment: fixed; /* Locks background for a reflective feel */
+    background-size: 300% 300%;
+    animation: metallicShift 20s ease infinite;
     color: #e2e8f0; 
     line-height: 1.6; 
 }
 
-@keyframes gradientMove {
+@keyframes metallicShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
@@ -20,9 +21,9 @@ body {
 
 /* --- 2. Typography --- */
 h1, h2 { margin-bottom: 20px; }
-h2 { color: #38bdf8; font-size: 1.8rem; }
-a { color: #38bdf8; text-decoration: none; transition: 0.2s; }
-a:hover { filter: brightness(1.4); }
+h2 { color: #f8fafc; font-size: 1.8rem; text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+a { color: #cbd5e1; text-decoration: none; transition: 0.2s; }
+a:hover { color: #ffffff; }
 
 /* --- 3. Layout --- */
 section { padding: 60px 10%; }
@@ -30,31 +31,31 @@ section { padding: 60px 10%; }
 
 /* --- 4. Components --- */
 .card { 
-    /* Glassmorphism Effect */
-    background: rgba(30, 41, 59, 0.6); 
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Brushed Metal Glassmorphism */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     padding: 25px; 
-    border-radius: 15px; 
+    border-radius: 20px; 
     margin-bottom: 20px; 
     transition: 0.3s ease; 
 }
 .card:hover { 
     transform: scale(1.01); 
-    border: 1px solid #38bdf8; 
-    background: rgba(30, 41, 59, 0.8);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .btn { 
     display: inline-block; padding: 12px 24px; 
-    background: #38bdf8; color: #0f172a; 
+    background: #e2e8f0; color: #1f1f1f; 
     border-radius: 6px; font-weight: 700; 
     transition: 0.3s;
 }
-.btn:hover { box-shadow: 0 0 15px #38bdf8; }
+.btn:hover { box-shadow: 0 0 20px rgba(255,255,255,0.5); }
 
 .skills span { 
-    display: inline-block; background: rgba(51, 65, 85, 0.8); 
+    display: inline-block; background: rgba(255, 255, 255, 0.1); 
     padding: 6px 14px; margin: 4px; 
     border-radius: 15px; font-size: 0.9rem; 
 }
@@ -63,7 +64,7 @@ section { padding: 60px 10%; }
 footer { 
     text-align: center; 
     padding: 40px 10%; 
-    background: rgba(2, 6, 23, 0.8); 
-    border-top: 1px solid #1e293b;
+    background: rgba(0, 0, 0, 0.3); 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 40px;
 }
