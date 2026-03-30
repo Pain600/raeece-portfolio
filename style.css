@@ -1,72 +1,112 @@
-/* --- 1. Global Resets --- */
-html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
-* { box-sizing: border-box; }
+/* --- 1. Global Reset --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
 
-body { 
-    font-family: 'Inter', sans-serif; 
-    /* Warm, vibrant bubble-iridescent gradient */
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #ffecd2);
-    background-attachment: fixed; 
-    background-size: 400% 400%;
-    animation: bubbleMove 20s ease infinite;
-    color: #4a4a4a; /* Darker text for readability */
+* {
+    box-sizing: border-box;
+}
+
+/* --- 2. Base Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a; /* deep navy */
+    color: #e2e8f0; /* soft white */
     line-height: 1.6;
 }
 
-@keyframes bubbleMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* --- 3. Typography --- */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-/* --- 2. Typography --- */
-h1, h2 { margin-bottom: 20px; }
-h2 { color: #5b21b6; font-size: 1.8rem; }
-a { color: #831843; text-decoration: none; transition: 0.2s; }
-a:hover { color: #ec4899; }
-
-/* --- 3. Layout --- */
-section { padding: 60px 10%; }
-.hero { text-align: center; padding: 100px 20px; }
-
-/* --- 4. Components --- */
-.card { 
-    /* Semi-transparent "bubble" glassmorphism */
-    background: rgba(255, 255, 255, 0.4); 
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    padding: 25px; 
-    border-radius: 20px; 
-    margin-bottom: 20px; 
-    transition: 0.3s ease; 
-}
-.card:hover { 
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.6);
+h1 {
+    font-size: 2.8rem;
+    color: #f8fafc;
 }
 
-.btn { 
-    display: inline-block; padding: 12px 24px; 
-    background: #ec4899; color: white; 
-    border-radius: 6px; font-weight: 700; 
+h2 {
+    font-size: 1.8rem;
+    color: #38bdf8; /* accent blue */
+}
+
+p {
+    color: #cbd5f5;
+}
+
+a {
+    color: #38bdf8;
+    text-decoration: none;
     transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
-}
-.btn:hover { box-shadow: 0 0 20px rgba(236, 72, 153, 0.6); }
-
-.skills span { 
-    display: inline-block; background: rgba(255, 255, 255, 0.5); 
-    padding: 6px 14px; margin: 4px; 
-    border-radius: 15px; font-size: 0.9rem; 
-    color: #4a4a4a;
 }
 
-/* --- 5. Footer --- */
-footer { 
-    text-align: center; 
-    padding: 40px 10%; 
-    background: rgba(255, 255, 255, 0.2); 
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+a:hover {
+    color: #7dd3fc;
+}
+
+/* --- 4. Layout --- */
+section {
+    padding: 60px 10%;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+/* --- 5. Cards --- */
+.card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+}
+
+/* --- 6. Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
+
+/* --- 7. Skills --- */
+.skills span {
+    display: inline-block;
+    background: #1e293b;
+    padding: 6px 14px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+}
+
+/* --- 8. Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 10%;
+    background: #020617;
+    border-top: 1px solid #1e293b;
     margin-top: 40px;
+    color: #94a3b8;
 }
